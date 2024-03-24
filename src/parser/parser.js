@@ -30,9 +30,6 @@ const parseMarkdown = (markdown) => {
         } else {
             elementType = 'paragraph';
         }
-
-
-        // Extract element content if not already extracted
         elementContent = elementContent || line;
         elements.push({ type: elementType, text: elementContent });
     }

@@ -20,10 +20,10 @@ const function_resolver = (type) => {
         return formatImages;
     }
     if (type === 'inlineCode') {
-        return format_backticks;
+        return format_backticks.format_backticks;
     }
     if (type === 'codeBlock') {
-        return format_code_blocks;
+        return format_code_blocks.format_code_blocks;
     }
     if (type === 'paragraph') {
         return paragraph_converter.paragraph_converter;
@@ -33,6 +33,50 @@ const function_resolver = (type) => {
     }
 }
 
+const apply_consecutive_formats = (element) => {
+    /**
+     * This function applies the formats to elements inside elements
+    */
 
+    if (element.text === "") return ""
 
-module.exports = function_resolver, apply_consecutive_formats;
+    let parsedElement = element.text.split(' ')
+
+    let formatableArray = []
+
+    for (let i = 0; i < parsedElement.length; i++) {
+        let unformattedString = parsedElement[i]
+        if (unformattedString.startsWith('*') || unformattedString.startsWith('_')) {
+            let specialChar = unformattedString[0]
+            let formattedString = ''
+            let j = i
+            while (j < parsedElement.length && !parsedElement[j].endsWith(specialChar)) {
+                formattedString += parsedElement[j] + ' '
+                j++
+            }
+            formattedString += parsedElement[j]
+            i = j
+            formatableArray.push(formattedString)
+            
+            
+        }
+        else {
+            formatableArray.push(unformattedString)
+        }
+    }
+
+    for (let i = 0; i < formatableArray.length; i++) {
+        let insideFormat = apply_consecutive_formats({ type: 'emphasis', text: formatableArray[i].slice(1, -1)})
+        let formattedCompleteString = formatableArray[i][0] + insideFormat + formatableArray[i][formatableArray[i].length - 1]
+        formatableArray[i] = function_resolver(element.type)(formattedCompleteString)
+
+    }
+
+    return formatableArray.join(' ')
+
+}
+
+console.log (apply_consecutive_formats({ type: 'emphasis', text: 'Hola *_como estas_*'}))
+
+// module.exports = function_resolver, apply_consecutive_formats;
+

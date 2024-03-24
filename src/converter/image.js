@@ -20,6 +20,6 @@ function separateImageParts(markdownImage) {
     }
 }
 
-console.log(formatImages('![alt text](https://www.google.com "title")'));
+// console.log(formatImages('![alt text](https://www.google.com "title")'));
 
 module.exports = formatImages;

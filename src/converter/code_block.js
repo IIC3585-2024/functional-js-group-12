@@ -11,3 +11,9 @@ function format_code_block(text) {
     return "<code>" + text + "</code>";
   }
 
+
+module.exports = {
+    format_code_blocks,
+    format_code_block
+  };
+

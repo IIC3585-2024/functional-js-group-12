@@ -1,8 +1,4 @@
 
-function format_code_block(text) {
-    return "<code>" + text + "</code>";
-  }
-
 function format_backticks(text) {
     const codeBlocks = getStringInsideTicks(text);
     codeBlocks.forEach((block) => {
@@ -12,8 +8,12 @@ function format_backticks(text) {
     return text;
   }
 
-  function getStringInsideTicks(text) {
+function getStringInsideTicks(text) {
     const regex = /``(.*?)``/g; // Updated regex
     const matches = text.match(regex);
     return matches ? matches.map((match) => match.slice(2, -2)) : [];
 }
+
+module.exports = {
+    format_backticks
+  };
