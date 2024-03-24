@@ -12,3 +12,5 @@ if (require.main === module) {
     const input_string = "This is a paragraph \n with a line break.";
     console.log(paragraph_converter(input_string));
 }
+
+module.exports = { paragraph_converter };

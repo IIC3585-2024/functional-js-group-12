@@ -15,3 +15,5 @@ if (require.main === module) {
     const input_string = "# This is a header";
     header_converter(input_string);
 }
+
+module.exports = { header_converter };
