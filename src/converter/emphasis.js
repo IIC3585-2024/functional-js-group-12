@@ -25,3 +25,5 @@ if (require.main === module) {
     const input_string = "*This is a strong and __italic__ text.*";
     console.log(emphasis_converter(input_string));
 }
+
+module.exports = { emphasis_converter };
