@@ -1,0 +1,31 @@
+<h1>Tarea 3: DCCopteros:</h1>
+<p></p>
+<h2>Consideraciones generales</h2>
+<p><br>Hola!! fue harto esfuerzo, pero logre implementar todo. El unico problema es que algunas veces al dibujar las lineas en el mapa el programa se crushea por que mi computador se ve sobre exigido.<br></p>
+<h3>Cosas implementadas y no implementadas</h3>
+<p></p>
+<ul><li>NetWorking: Todo implementado</li><li>Arquitectura Cliente-Servidor: Todo implementado</li><li>Manejo de Bytes: Todo implementado, pero para decodificar la imagen en el juego preferí usar una función que devolviera un pixmap, por comodidad. Así que para decodificar imagenes utilizo "traducir<em>imagen", del modulo cargar</em>datos. No es parte de la pauta utilizar explicitamente las funciones de codificación.py</li><li>Interfaz gráfica: Todo implementado, aunque la sala de juegos se pude crushear en el metodo dibujar si se estan ejecutando demasiadas tareas</li><li>Grafos: Todo implementado, estoy especialmente orgulloso de mi metodo para encontrar la ruta más larga</li><li>Reglas DCCópteros: Todo implementado</li><li>General: Todo implementado</li><li>Bonus: implementé ambos. Si el sistema se crushea antes de terminar el juego, intenta descomentar el boton de terminar antes, más info en la PD de las consideraciones</li></ul>
+<p><br></p>
+<h2>Ejecución</h2>
+<p>Tanto en el cliente como en el servidor, me modulo a ejecutar es main.py<br><br></p>
+<h2>Librerías</h2>
+<h3>Librerías externas utilizadas</h3>
+<p>La lista de librerías externas que utilicé fue la siguiente:<br></p>
+<ol><li>PyQt5, de la cual utilicé multimples modulos. Debe instalarse</li>,<li>socket</li>,<li>json</li>,<li>random</li>,<li>Aquí hay un link dentro de la lista <a href="https://github.com/IIC2233/syllabus/blob/master/Tareas/Descuentos.md">link</a>.</li></ol>
+<p></p>
+<h3>Librerías propias</h3>
+<p>Por otro lado, los módulos que fueron creados fueron los siguientes:<br></p>
+<ol><li>Servidor:</li>,<li>Cliente:</li></ol>
+<p></p>
+<h2>Supuestos y consideraciones adicionales</h2>
+<p>Los supuestos que realicé durante la tarea son los siguientes:<br></p>
+<ol><li>A los parametros de los puntos le agregue un valor para los caminos de valor 7.</li>,<li>Los crusheos se hacen en la parte de dibujar (aunque esta funciona bien por si sola) por que mi comptador no puede con tantas tareas, pero si se deja de dibujar (no llamando al metodo dibujar en la función actualizar<em>mapa</em>y_nodos, en el archivo FuncionesSalaJuegos.py), el juego funciona perfecto</li></ol>
+<p><br>PD: El juego a veces se chushea mientras dibuja, por eso en el archivo SalaJuegos.py, entre las lineas 193 y 203 deje una lineas comentadas. Si se descomentan, aparecerá un botón, que si todos los jugadores presionan terminará el juego antes de tiempo con los puntajes actuales<br><br>-------<br></p>
+<h2>Referencias de código externo</h2>
+<p><br>Para realizar mi tarea saqué código de:</p>
+<ol><li>La Tarea 2, para el manejo de ventanas</li>,<li>La AS4, para el manejo de nodos</li>,<li>La AF7, para el envio de información</li>,<li>La ayudantia 11 de la sección 2, para el manejo de sockets</li>,<li>La AF4, para el manejo del gif del bonus</li></ol>
+<p><br></p>
+<h2>Descuentos</h2>
+<p>La guía de descuentos se encuentra <a href="https://github.com/IIC2233/syllabus/blob/master/Tareas/Descuentos.md">link</a>.<br></p>
+<img src="https://www.concierto.cl/wp-content/uploads/2017/10/Florentijn-Hofman-Mama-Duck.jpg" alt="Esto es un imagen" title="null" />
+<p></p>

@@ -40,14 +40,14 @@ function fuse_same_type_elements(elements) {
     const especial_elements = ['orderedList', 'unorderedList', 'paragraph', 'blockquote'];
     let current_element = elements[0];
 
-    if (!especial_elements.includes(current_element.type)) {
-        return elements;
-    }
+    console.log(current_element);
+
 
     let fused_elements = [];
     let new_element;
     for (let i = 1; i < elements.length; i++) {
-        if (current_element.type === elements[i].type) {
+        console.log(elements[i]);
+        if (current_element.type === elements[i].type && (especial_elements.includes(current_element.type))) {
             new_element = { type: current_element.type, text: current_element.text + '\n' + elements[i].text };
             current_element = new_element;
         } else {

@@ -1,10 +1,10 @@
 # Tarea 3: DCCopteros:
 
-## Consideraciones generales :octocat:
+## Consideraciones generales
 
 Hola!! fue harto esfuerzo, pero logre implementar todo. El unico problema es que algunas veces al dibujar las lineas en el mapa el programa se crushea por que mi computador se ve sobre exigido.
 
-### Cosas implementadas y no implementadas :white_check_mark: :x:
+### Cosas implementadas y no implementadas
 
 * NetWorking: Todo implementado
 * Arquitectura Cliente-Servidor: Todo implementado
@@ -16,11 +16,11 @@ Hola!! fue harto esfuerzo, pero logre implementar todo. El unico problema es que
 * Bonus: implementé ambos. Si el sistema se crushea antes de terminar el juego, intenta descomentar el boton de terminar antes, más info en la PD de las consideraciones
 
 
-## Ejecución :computer:
+## Ejecución
 Tanto en el cliente como en el servidor, me modulo a ejecutar es main.py
     
 
-## Librerías :books:
+## Librerías
 ### Librerías externas utilizadas
 La lista de librerías externas que utilicé fue la siguiente:
 
@@ -36,7 +36,7 @@ Por otro lado, los módulos que fueron creados fueron los siguientes:
 1. Servidor:
 2. Cliente:
 
-## Supuestos y consideraciones adicionales :thinking:
+## Supuestos y consideraciones adicionales
 Los supuestos que realicé durante la tarea son los siguientes:
 
 1. A los parametros de los puntos le agregue un valor para los caminos de valor 7.
@@ -46,7 +46,7 @@ PD: El juego a veces se chushea mientras dibuja, por eso en el archivo SalaJuego
 
 -------
 
-## Referencias de código externo :book:
+## Referencias de código externo
 
 Para realizar mi tarea saqué código de:
 1. La Tarea 2, para el manejo de ventanas
