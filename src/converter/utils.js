@@ -11,3 +11,9 @@ const itemParsers = [
 ];
 
 const parseLine = parser(itemParsers);
+
+module.exports = {
+  compose,
+  stringToArray,
+  toHtmlList
+};
