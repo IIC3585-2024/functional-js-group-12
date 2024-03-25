@@ -11,7 +11,7 @@ const markDown_to_HTML = (markdown) => {
         const element = fused_elements[i];
 
         html_element = function_resolver.apply_format(element);
-        html += html_element;
+        html += html_element + '\n';
     }
 
     return html;

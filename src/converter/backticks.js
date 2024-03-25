@@ -14,5 +14,6 @@ function getStringInsideTicks(text) {
 }
 
 module.exports = {
-  format_backticks
+  format_backticks,
+  getStringInsideTicks
 };

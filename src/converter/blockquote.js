@@ -4,4 +4,6 @@ function blockquote_converter(markdown) {
   return html;
 }
 
-model.exports = blockquote_converter;
+module.exports = {
+  blockquote_converter
+}; // Path: src/converter/code_block.js

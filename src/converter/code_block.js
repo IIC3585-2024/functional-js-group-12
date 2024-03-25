@@ -1,3 +1,6 @@
+const { getStringInsideTicks } = require("./backticks.js");
+
+
 function format_code_blocks(text) {
     const codeBlocks = getStringInsideTicks(text);
     codeBlocks.forEach((block) => {

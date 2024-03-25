@@ -7,6 +7,7 @@ const formatImages = require('../converter/image.js');
 const paragraph_converter = require('../converter/paragraphs.js');
 const lists_converter = require('../converter/lists.js');
 const hyperlinks = require('../converter/hyperlink.js')
+const blockquote_converter = require('../converter/blockquote.js');
 
 
 const function_resolver = (type) => {
@@ -30,6 +31,9 @@ const function_resolver = (type) => {
     }
     if (type === 'paragraph') {
         return paragraph_converter.paragraph_converter;
+    }
+    if (type === 'blockquote') {
+        return blockquote_converter.blockquote_converter;
     }
 }
 
