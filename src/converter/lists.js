@@ -4,7 +4,7 @@ const { toHtmlList } = require('./utils.js');
 
 function ol_list_converter(markdownList) {
   const htmlList = compose(toHtmlList, stringToArray)(markdownList);
-  return `<ol>${htmlList.join('')}</ol>`;
+  return `<ol>${htmlList}</ol>`;
 }
 
 function ul_list_converter(markdownList) {
