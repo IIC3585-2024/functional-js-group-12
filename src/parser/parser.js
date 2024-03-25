@@ -8,7 +8,10 @@ const parseMarkdown = (markdown) => {
 
         if (line.startsWith('#')) {
             elementType = 'header';
-        } else if (line.startsWith('- ') || line.startsWith('* ') || line.startsWith('+ ')){
+        } else if (line.startsWith('---') ) {
+            elementType = 'hr';
+        }
+        else if (line.startsWith('- ') || line.startsWith('* ') || line.startsWith('+ ')){
             elementType = 'unorderedList';  
         } else if (line[0] >= '0' && line[0] <= '9' && line[1] === '.' && line[2] === ' ') {
             elementType = 'orderedList';

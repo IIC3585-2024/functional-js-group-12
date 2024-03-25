@@ -8,6 +8,7 @@ const paragraph_converter = require('../converter/paragraphs.js');
 const lists_converter = require('../converter/lists.js');
 const hyperlinks = require('../converter/hyperlink.js')
 const blockquote_converter = require('../converter/blockquote.js');
+const horizontal_rule = require('../converter/horizontal_rule.js');
 
 
 const function_resolver = (type) => {
@@ -34,6 +35,9 @@ const function_resolver = (type) => {
     }
     if (type === 'blockquote') {
         return blockquote_converter.blockquote_converter;
+    }
+    if (type === 'hr') {
+        return horizontal_rule.format_horizontal_rule;
     }
 }
 
