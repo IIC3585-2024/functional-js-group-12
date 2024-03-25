@@ -1,7 +1,8 @@
 const stringToArray = (string) => string.split('\n');
-const toHtmlList = (items) => items.map((line) => parseLine(line));
 const parser = parserFunctions => data => parserFunctions.reduce((item, fn) => fn(item), data);
 const compose = (f, g) => x => f(g(x));
+
+const toHtmlList = (items) => items.map((line) => parseLine(line));
 
 const itemParsers = [
   item => item.trim(),
@@ -10,10 +11,3 @@ const itemParsers = [
 ];
 
 const parseLine = parser(itemParsers);
-
-function fromMarkdownToOrderedList(markdownList) {
-  const htmlList = compose(toHtmlList, stringToArray)(markdownList);
-  return `<ol>${htmlList.join('')}</ol>`;
-}
-
-module.exports = { fromMarkdownToOrderedList };

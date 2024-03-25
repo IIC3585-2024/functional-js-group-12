@@ -4,6 +4,7 @@ const emphasis_converter = require('../converter/emphasis.js');
 const header_converter = require('../converter/headers.js');
 const formatImages = require('../converter/image.js');
 const paragraph_converter = require('../converter/paragraphs.js');
+const ol_list_converter = require('../converter/lists/lists.js');
 const hyperlinks = require('../converter/hyperlink.js');
 
 const function_resolver = (type) => {
@@ -14,7 +15,7 @@ const function_resolver = (type) => {
         return list_converter.list_converter;
     }
     if (type === 'orderedList') {
-        return list_converter.list_converter;
+        return ol_list_converter;
     }
     if (type === 'image') {
         return formatImages;
