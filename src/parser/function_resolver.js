@@ -1,4 +1,4 @@
-const { compose, compose_3 } = require('../converter/utils.js');
+const { compose, compose_4 } = require('../converter/utils.js');
 const format_backticks = require('../converter/backticks.js');
 const format_code_blocks = require('../converter/code_block.js');
 const emphasis_converter = require('../converter/emphasis.js');
@@ -44,7 +44,7 @@ const function_resolver = (type) => {
 const apply_format = (element) => {
     const { type, text } = element;
     const resolvedFunction = function_resolver(type);
-    const formatted_element = compose_3(hyperlinks.hyperlink_converter, emphasis_converter.emphasis_converter, resolvedFunction)(text);
+    const formatted_element = compose_4(format_code_blocks.format_code_blocks, hyperlinks.hyperlink_converter, emphasis_converter.emphasis_converter, resolvedFunction)(text);
     return formatted_element;
 }
 

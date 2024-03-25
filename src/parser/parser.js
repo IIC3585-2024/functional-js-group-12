@@ -8,7 +8,7 @@ const parseMarkdown = (markdown) => {
 
         if (line.startsWith('#')) {
             elementType = 'header';
-        } else if (line.startsWith('---') ) {
+        } else if (line.startsWith('---') ){
             elementType = 'hr';
         }
         else if (line.startsWith('- ') || line.startsWith('* ') || line.startsWith('+ ')){

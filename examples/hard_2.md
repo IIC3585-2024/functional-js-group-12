@@ -42,7 +42,9 @@ Los supuestos que realicé durante la tarea son los siguientes:
 1. A los parametros de los puntos le agregue un valor para los caminos de valor 7.
 2. Los crusheos se hacen en la parte de dibujar (aunque esta funciona bien por si sola) por que mi comptador no puede con tantas tareas, pero si se deja de dibujar (no llamando al metodo dibujar en la función actualizar_mapa_y_nodos, en el archivo FuncionesSalaJuegos.py), el juego funciona perfecto
 
-PD: El juego a veces se chushea mientras dibuja, por eso en el archivo SalaJuegos.py, entre las lineas 193 y 203 deje una lineas comentadas. Si se descomentan, aparecerá un botón, que si todos los jugadores presionan terminará el juego antes de tiempo con los puntajes actuales
+PD: El juego a veces se chushea ``print("codigo funciona")`` mientras dibuja, por eso en el archivo SalaJuegos.py, entre las lineas 193 y 203 deje una lineas comentadas. Si se descomentan, aparecerá un botón, que si todos los jugadores presionan terminará el juego antes de tiempo con los puntajes actuales
+
+
 
 -------
 > Hola, esto es un bloque de cita, y aquí puedo escribir de forma apropiada

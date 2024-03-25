@@ -4,7 +4,7 @@ const { getStringInsideTicks } = require("./backticks.js");
 function format_code_blocks(text) {
     const codeBlocks = getStringInsideTicks(text);
     codeBlocks.forEach((block) => {
-      text = text.replace("`" + block + "`", format_code_block(block));
+      text = text.replace("``" + block + "``", format_code_block(block));
     });
   
     return text;
