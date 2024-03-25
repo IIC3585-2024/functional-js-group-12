@@ -16,4 +16,4 @@ function fromMarkdownToOrderedList(markdownList) {
   return `<ol>${htmlList.join('')}</ol>`;
 }
 
-export default fromMarkdownToOrderedList;
+module.exports = { fromMarkdownToOrderedList };
