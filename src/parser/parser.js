@@ -39,6 +39,7 @@ const parseMarkdown = (markdown) => {
 function fuse_same_type_elements(elements) {
     const especial_elements = ['orderedList', 'unorderedList', 'paragraph', 'blockquote'];
     let current_element = elements[0];
+    console.log(elements)
 
     if (!especial_elements.includes(current_element.type)) {
         return elements;
