@@ -27,14 +27,14 @@ La lista de librerías externas que utilicé fue la siguiente:
 1. PyQt5, de la cual utilicé multimples modulos. Debe instalarse
 2. socket
 3. json
-4. random
+4. *random*
 5. Aquí hay un link dentro de la lista [link](https://github.com/IIC2233/syllabus/blob/master/Tareas/Descuentos.md).
 
 ### Librerías propias
 Por otro lado, los módulos que fueron creados fueron los siguientes:
 
-1. Servidor:
-2. Cliente:
+1. **Servidor**:
+2. ***Cliente***:
 
 ## Supuestos y consideraciones adicionales
 Los supuestos que realicé durante la tarea son los siguientes:
