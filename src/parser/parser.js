@@ -1,5 +1,3 @@
-const function_resolver = require('./function_resolver.js');
-
 const parseMarkdown = (markdown) => {
     const lines = markdown.split('\n');
     const elements = [];
@@ -10,14 +8,15 @@ const parseMarkdown = (markdown) => {
 
         if (line.startsWith('#')) {
             elementType = 'header';
-        } else if (line.startsWith('* ')) {
-            elementType = 'unorderedList';
-            
+        } else if (line.startsWith('- ') || line.startsWith('* ') || line.startsWith('+ ')){
+            elementType = 'unorderedList';  
         } else if (line[0] >= '0' && line[0] <= '9' && line[1] === '.' && line[2] === ' ') {
             elementType = 'orderedList';
-        } else if (line.startsWith('![[') && line.endsWith(']]')) {
+        } else if (line.startsWith('![')) {
             elementType = 'image';
-        } else if (line.startsWith('`') && line.endsWith('`')) {
+        } else if (line.startsWith('> ')) {
+            elementType = 'blockquote';
+        } else if (line.startsWith('`') && line.endsWith('`') && !line.startsWith('```')) {
             elementType = 'inlineCode';
         } else if (line.startsWith('```')) {
             elementType = 'codeBlock';
@@ -34,13 +33,18 @@ const parseMarkdown = (markdown) => {
         elements.push({ type: elementType, text: elementContent });
     }
 
-    console.log(elements);
     return elements;
 };
 
 function fuse_same_type_elements(elements) {
-    let fused_elements = [];
+    const especial_elements = ['orderedList', 'unorderedList', 'paragraph', 'blockquote'];
     let current_element = elements[0];
+
+    if (!especial_elements.includes(current_element.type)) {
+        return elements;
+    }
+
+    let fused_elements = [];
     let new_element;
     for (let i = 1; i < elements.length; i++) {
         if (current_element.type === elements[i].type) {
