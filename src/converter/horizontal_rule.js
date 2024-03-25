@@ -7,3 +7,8 @@ function format_horizontal_rule() {
 
     return "<a href=\"" + link + "\">" + name + "</a>";
 }
+
+module.exports = { 
+  format_horizontal_rule,
+  format_hyperlink
+};

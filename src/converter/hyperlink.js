@@ -11,4 +11,4 @@ function separateLinkAndText(hyperlink) {
     }
 }
 
-module.exports = separateLinkAndText;   
+module.exports = separateLinkAndText;

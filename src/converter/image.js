@@ -1,8 +1,6 @@
 function formatImages(text){
     const { altText, imageUrl, title } = separateImageParts(text);
 
-    console.log(altText, imageUrl, title);
-
     return `<img src="${imageUrl}" alt="${altText}" title="${title}" />`;
 }
 
@@ -16,10 +14,8 @@ function separateImageParts(markdownImage) {
         const title = match[3] || null;
         return { altText, imageUrl, title };
     } else {
-        return null; // Return null if the input doesn't match the expected format
+        return null;
     }
 }
-
-// console.log(formatImages('![alt text](https://www.google.com "title")'));
 
 module.exports = formatImages;

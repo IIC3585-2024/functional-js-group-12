@@ -16,4 +16,3 @@ module.exports = {
     format_code_blocks,
     format_code_block
   };
-
