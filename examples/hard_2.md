@@ -45,6 +45,7 @@ Los supuestos que realicé durante la tarea son los siguientes:
 PD: El juego a veces se chushea mientras dibuja, por eso en el archivo SalaJuegos.py, entre las lineas 193 y 203 deje una lineas comentadas. Si se descomentan, aparecerá un botón, que si todos los jugadores presionan terminará el juego antes de tiempo con los puntajes actuales
 
 -------
+> Hola, esto es un bloque de cita, y aquí puedo escribir de forma apropiada
 
 ## Referencias de código externo
 
